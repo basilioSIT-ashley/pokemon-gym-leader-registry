@@ -1,0 +1,22 @@
+
+<nav class="navbar">
+  <a class="brand" routerLink="/home">Pokémon Gym Registry</a>
+
+  <div class="nav-links">
+    <a
+      routerLink="/home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </a>
+
+    <a routerLink="/leaders" routerLinkActive="active">
+      Gym Leaders
+    </a>
+
+    <a routerLink="/leaders/new" routerLinkActive="active">
+      Add Leader
+    </a>
+  </div>
+</nav>

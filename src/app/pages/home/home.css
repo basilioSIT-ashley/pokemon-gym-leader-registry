@@ -1,0 +1,94 @@
+
+.hero {
+  padding: 55px 30px;
+  text-align: center;
+  background: #edf2ff;
+  border-radius: 16px;
+}
+
+.eyebrow {
+  color: #5369a6;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  color: #202b46;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 16px 0;
+}
+
+.hero > p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: #202b46;
+  color: white;
+}
+
+.secondary {
+  border: 2px solid #202b46;
+  color: #202b46;
+}
+
+.regions {
+  margin-top: 35px;
+}
+
+.regions h2 {
+  color: #202b46;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.region-card {
+  padding: 22px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #dce2ee;
+}
+
+.region-card h3 {
+  margin-top: 0;
+}
+
+.count {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.kanto {
+  border-top: 5px solid #e9a23b;
+}
+
+.johto {
+  border-top: 5px solid #639bca;
+}
+
+.hoenn {
+  border-top: 5px solid #68a77a;
+}

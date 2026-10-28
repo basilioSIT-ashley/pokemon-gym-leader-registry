@@ -1,0 +1,78 @@
+
+.leader-card {
+  background: white;
+  border: 1px solid #dce2ee;
+  border-top: 5px solid #9aa4b5;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 3px 10px #202b4610;
+}
+
+.leader-card.kanto {
+  border-top-color: #e9a23b;
+}
+
+.leader-card.johto {
+  border-top-color: #639bca;
+}
+
+.leader-card.hoenn {
+  border-top-color: #68a77a;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.region-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #69758d;
+  font-weight: bold;
+}
+
+.card-header h2 {
+  margin: 8px 0 16px;
+  color: #202b46;
+}
+
+.level {
+  background: #edf2ff;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.motto {
+  font-style: italic;
+  color: #69758d;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card-actions button {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-button {
+  background: #e8edf8;
+  color: #202b46;
+}
+
+.delete-button {
+  background: #fde8e7;
+  color: #a12a27;
+}

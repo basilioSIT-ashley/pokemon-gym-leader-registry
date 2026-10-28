@@ -1,0 +1,98 @@
+
+<section class="form-page">
+  <header class="page-heading">
+    <p class="eyebrow">POKÉMON LEAGUE DATABASE</p>
+
+    <h1>
+      {{ isEditMode() ? 'Edit Gym Leader' : 'Register a Gym Leader' }}
+    </h1>
+
+    <p>Enter the details below to maintain the Gym Leader registry.</p>
+  </header>
+
+  @if (isLoading()) {
+    <p class="status-message">Loading Gym Leader details...</p>
+  } @else {
+    <form [formGroup]="leaderForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-field">
+        <label for="name">Gym Leader Name *</label>
+        <input id="name" type="text" formControlName="name" placeholder="e.g. Brock" />
+
+        @if (leaderForm.controls.name.touched && leaderForm.controls.name.hasError('required')) {
+          <small class="error">Name is required.</small>
+        }
+        @if (leaderForm.controls.name.touched && leaderForm.controls.name.hasError('minlength')) {
+          <small class="error">Name must contain at least 2 characters.</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label for="region">Region *</label>
+        <select id="region" formControlName="region">
+          <option value="Kanto">Kanto</option>
+          <option value="Johto">Johto</option>
+          <option value="Hoenn">Hoenn</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="town">Town *</label>
+        <input id="town" type="text" formControlName="town" placeholder="e.g. Pewter City" />
+
+        @if (leaderForm.controls.town.touched && leaderForm.controls.town.invalid) {
+          <small class="error">Town is required.</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label for="badge">Badge *</label>
+        <input id="badge" type="text" formControlName="badge" placeholder="e.g. Boulder Badge" />
+
+        @if (leaderForm.controls.badge.touched && leaderForm.controls.badge.invalid) {
+          <small class="error">Badge is required.</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label for="specialty">Pokémon Specialty *</label>
+        <input id="specialty" type="text" formControlName="specialty" placeholder="e.g. Rock" />
+
+        @if (leaderForm.controls.specialty.touched && leaderForm.controls.specialty.invalid) {
+          <small class="error">Specialty is required.</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label for="aceLevel">Ace Pokémon Level (1–100) *</label>
+        <input id="aceLevel" type="number" min="1" max="100" step="1" formControlName="aceLevel" />
+
+        @if (leaderForm.controls.aceLevel.touched && leaderForm.controls.aceLevel.invalid) {
+          <small class="error">Enter a whole-number level from 1 to 100.</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label for="motto">Motto (optional)</label>
+        <textarea id="motto" rows="3" maxlength="150" formControlName="motto" placeholder="Enter the Gym Leader's motto"></textarea>
+
+        @if (leaderForm.controls.motto.touched && leaderForm.controls.motto.hasError('maxlength')) {
+          <small class="error">Motto must be 150 characters or fewer.</small>
+        }
+      </div>
+
+      @if (errorMessage()) {
+        <p class="error-message">{{ errorMessage() }}</p>
+      }
+
+      <div class="form-actions">
+        <button type="submit" class="submit-button">
+          {{ isEditMode() ? 'Save Changes' : 'Add Leader' }}
+        </button>
+
+        <button type="button" class="cancel-button" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+    </form>
+  }
+</section>

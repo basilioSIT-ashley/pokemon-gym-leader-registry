@@ -1,0 +1,54 @@
+
+<section class="list-page">
+  <header class="page-heading">
+    <div>
+      <p class="eyebrow">POKÉMON LEAGUE DATABASE</p>
+      <h1>Gym Leaders</h1>
+      <p>Browse and manage registered Gym Leaders.</p>
+    </div>
+
+    <a routerLink="/leaders/new" class="add-button">+ Add Leader</a>
+  </header>
+
+  <div class="filters">
+    <span>Filter by region:</span>
+
+    <button
+      type="button"
+      [class.active]="selectedRegion() === 'All'"
+      (click)="filterBy('All')"
+    >All</button>
+
+    <button
+      type="button"
+      [class.active]="selectedRegion() === 'Kanto'"
+      (click)="filterBy('Kanto')"
+    >Kanto</button>
+
+    <button
+      type="button"
+      [class.active]="selectedRegion() === 'Johto'"
+      (click)="filterBy('Johto')"
+    >Johto</button>
+
+    <button
+      type="button"
+      [class.active]="selectedRegion() === 'Hoenn'"
+      (click)="filterBy('Hoenn')"
+    >Hoenn</button>
+  </div>
+
+  <div class="leader-grid">
+    @for (leader of filteredLeaders(); track leader._id) {
+      <app-leader-card
+        [leader]="leader"
+        (edit)="editLeader($event)"
+        (remove)="removeLeader($event)"
+      />
+    } @empty {
+      <p class="empty-message">
+        No Gym Leaders registered yet.
+      </p>
+    }
+  </div>
+</section>
