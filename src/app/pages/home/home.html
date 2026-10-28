@@ -1,38 +1,48 @@
 
-<section class="hero">
-  <p class="eyebrow">POKÉMON LEAGUE DATABASE</p>
-  <h1>Welcome to the Gym Leader Registry!</h1>
-  <p>
-    Explore Gym Leaders across the regions of Kanto, Johto, and Hoenn.
-    View their badges, specialties, towns, and ace Pokémon levels.
-  </p>
+<section class="home-page">
+  <div class="hero">
+    <p class="eyebrow">✦ POKÉMON LEAGUE DATABASE ✦</p>
 
-  <div class="hero-actions">
-    <a routerLink="/leaders" class="button primary">View Gym Leaders</a>
-    <a routerLink="/leaders/new" class="button secondary">Register a Leader</a>
+    <h1>Become a Pokémon Champion!</h1>
+
+    <p>
+      Discover Gym Leaders from Kanto, Johto, and Hoenn.
+      Explore their badges, hometowns, specialties, and ace Pokémon levels.
+      Your journey to the Pokémon League starts here!
+    </p>
+
+    <div class="hero-actions">
+      <a routerLink="/leaders">⚡ View Gym Leaders</a>
+      <a routerLink="/leaders/new">＋ Register a Leader</a>
+    </div>
   </div>
-</section>
 
-<section class="regions">
-  <h2>Registry by Region</h2>
+  <section class="region-section">
+    <h2>🌍 Explore the Regions</h2>
+    <p>Every great trainer has a region to call home.</p>
 
-  <div class="region-grid">
-    <article class="region-card kanto">
-      <h3>Kanto</h3>
-      <p class="count">{{ kantoCount() }}</p>
-      <p>Registered Gym Leaders</p>
-    </article>
+    <div class="region-grid">
+      <article class="region-card kanto">
+        <h3>🔥 Kanto</h3>
+        <div class="count">{{ kantoCount() }}</div>
+        <p>Registered Gym Leaders</p>
+      </article>
 
-    <article class="region-card johto">
-      <h3>Johto</h3>
-      <p class="count">{{ johtoCount() }}</p>
-      <p>Registered Gym Leaders</p>
-    </article>
+      <article class="region-card johto">
+        <h3>✨ Johto</h3>
+        <div class="count">{{ johtoCount() }}</div>
+        <p>Registered Gym Leaders</p>
+      </article>
 
-    <article class="region-card hoenn">
-      <h3>Hoenn</h3>
-      <p class="count">{{ hoennCount() }}</p>
-      <p>Registered Gym Leaders</p>
-    </article>
-  </div>
+      <article class="region-card hoenn">
+        <h3>🌿 Hoenn</h3>
+        <div class="count">{{ hoennCount() }}</div>
+        <p>Registered Gym Leaders</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="home-footer">
+    <p>⭐ Train hard. Earn badges. Become a Champion! ⭐</p>
+  </footer>
 </section>

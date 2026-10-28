@@ -1,44 +1,162 @@
 
+:host {
+  display: block;
+}
+
 .navbar {
+  position: relative;
+  z-index: 10;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 18px 6%;
-  background: #202b46;
-  color: white;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px clamp(16px, 5vw, 64px);
+  color: white;
+  background: linear-gradient(110deg, #10264f, #0759a8);
+  border-bottom: 4px solid #ffd52a;
+  box-shadow: 0 5px 18px rgba(15, 39, 80, 0.2);
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: white;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 900;
   text-decoration: none;
+}
+
+.brand span {
+  color: #ffdf35;
+  text-shadow: 2px 2px #c52b35;
 }
 
 .nav-links {
   display: flex;
-  gap: 18px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .nav-links a {
+  padding: 10px 14px;
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-2px);
+}
+
 .nav-links a.active {
-  background: #e9a23b;
-  color: #202b46;
+  color: #ffdf35;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 -3px #ffdf35;
 }
 
 @media (max-width: 600px) {
   .navbar {
-    align-items: flex-start;
-    flex-direction: column;
+    justify-content: center;
+    padding: 14px;
+  }
+
+  .brand {
+    justify-content: center;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .nav-links a {
+    padding: 9px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+
+.pokeball {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    #ef4444 0%,
+    #ef4444 44%,
+    #172b4d 44%,
+    #172b4d 56%,
+    white 56%,
+    white 100%
+  );
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pokeball::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  border: 3px solid #172b4d;
+  border-radius: 50%;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+
+.brand-pokemon {
+  color: #ffdf35;
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-shadow: 2px 2px #c52b35;
+}
+
+.brand-title {
+  color: white;
+  font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .pokeball {
+    flex-basis: 25px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .brand-pokemon {
+    font-size: 1.1rem;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+}
+
+.pokeball {
+  animation: pokeball-float 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pokeball {
+    animation: none;
   }
 }

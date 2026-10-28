@@ -1,6 +1,10 @@
 
 <nav class="navbar">
-  <a class="brand" routerLink="/home">Pokémon Gym Registry</a>
+  <a class="brand" routerLink="/home" aria-label="Pokémon Gym Registry home">
+    <span class="pokeball" aria-hidden="true"></span>
+    <span class="brand-pokemon">Pokémon</span>
+    <span class="brand-title">Gym Leader Registry</span>
+  </a>
 
   <div class="nav-links">
     <a
@@ -8,15 +12,15 @@
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
     >
-      Home
+      🏠 Home
     </a>
 
     <a routerLink="/leaders" routerLinkActive="active">
-      Gym Leaders
+      📋 Gym Leaders
     </a>
 
     <a routerLink="/leaders/new" routerLinkActive="active">
-      Add Leader
+      ➕ Add Leader
     </a>
   </div>
 </nav>

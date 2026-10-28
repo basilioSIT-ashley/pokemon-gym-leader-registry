@@ -1,0 +1,123 @@
+
+:host {
+  display: block;
+}
+
+.list-page {
+  padding-bottom: 36px;
+}
+
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 28px;
+  color: white;
+  border-radius: 20px;
+  background: linear-gradient(120deg, #10264f, #0759c7, #08a7e8);
+  box-shadow: 0 10px 25px rgba(7, 89, 199, 0.18);
+}
+
+.eyebrow {
+  color: #ffdf35;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.page-heading h1 {
+  margin: 8px 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.page-heading p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.add-button {
+  display: inline-block;
+  padding: 13px 18px;
+  border: 2px solid #fff0a6;
+  border-radius: 12px;
+  color: #172b4d;
+  background: linear-gradient(135deg, #ffdf35, #ffb703);
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0;
+}
+
+.filters button {
+  padding: 10px 17px;
+  border: 2px solid #dbeafe;
+  border-radius: 999px;
+  color: #1e3a8a;
+  background: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filters button:hover {
+  border-color: #60a5fa;
+  background: #eff6ff;
+}
+
+.filters button.active {
+  border-color: #0759c7;
+  color: white;
+  background: linear-gradient(120deg, #0759c7, #08a7e8);
+  box-shadow: 0 4px 12px rgba(7, 89, 199, 0.2);
+}
+
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 20px;
+}
+
+.empty-message {
+  padding: 30px;
+  border: 2px dashed #93c5fd;
+  border-radius: 16px;
+  color: #475569;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .page-heading {
+    padding: 22px;
+  }
+
+  .add-button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .filters {
+    gap: 8px;
+  }
+
+  .filters button {
+    padding: 9px 13px;
+  }
+}
