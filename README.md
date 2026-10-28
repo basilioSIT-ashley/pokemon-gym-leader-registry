@@ -1,63 +1,93 @@
-<<<<<<< HEAD
-# GymLeaderRegistry
+# Pokémon Gym Leader Registry
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.7.
+A Pokémon-themed web application for managing Gym Leader records. Built with Angular, Express.js, and MongoDB Atlas.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- **View Gym Leaders** — Browse registered Gym Leaders and their details.
+- **Add Leaders** — Create new Gym Leader records.
+- **Edit Leaders** — Update existing leader information.
+- **Delete Leaders** — Remove records when needed.
+- **Regional Counts** — View Gym Leader counts for Kanto, Johto, and Hoenn.
+- **Responsive Design** — Pokémon-inspired styling with colorful cards and animations.
+
+## Tech Stack
+
+- **Frontend:** Angular
+- **Backend:** Node.js and Express.js
+- **Database:** MongoDB Atlas with Mongoose
+- **API:** REST API for CRUD operations
+
+## Prerequisites
+
+Install the following before running the application:
+
+- Node.js and npm
+- Angular CLI
+- A MongoDB Atlas database connection
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/basilioSIT-ashley/pokemon-gym-leader-registry.git
+cd pokemon-gym-leader-registry
+```
+
+### 2. Install frontend dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure the backend
+
+Open the `backend` folder and install its dependencies:
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the `backend` folder and configure the environment variables required by your backend, including your MongoDB Atlas connection string and server port. Refer to your backend configuration for the exact variable names.
+
+**Security:** Never commit your `.env` file, database credentials, or secrets to GitHub.
+
+### 4. Run the backend
+
+From the `backend` folder, use the start command configured in its `package.json`, for example:
+
+```bash
+npm start
+```
+
+### 5. Run the Angular frontend
+
+Open a second terminal in the project root and run:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open [http://localhost:4200](http://localhost:4200) in your browser.
 
-## Code scaffolding
+Make sure the backend is running and the frontend is configured to use the correct API URL.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Building the Project
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+From the project root, run:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The production build output is generated in the configured Angular output directory.
 
-## Running unit tests
+## Project Purpose
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+This project demonstrates full-stack web development through Angular components, routing, reactive state management, REST API integration, and MongoDB database operations.
 
-```bash
-ng test
-```
+## Author
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# pokemon-gym-leader-registry
->>>>>>> 3962065f1658fb43877a514e91a8b30a596d3596
+Created as a web development project.
